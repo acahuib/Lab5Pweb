@@ -1,4 +1,4 @@
-from colors import color, inverter
+from color import color, inverter
 
 class Picture:
     def __init__(self, img):
@@ -30,7 +30,6 @@ class Picture:
         return Picture(negative)
 
     def join(self, p):
-        """Devuelve una nueva figura poniendo la figura del argumento al lado derecho de la figura actual"""
         joined = []
         for i in range(len(self.img)):
             joined.append(self.img[i] + p.img[i])
