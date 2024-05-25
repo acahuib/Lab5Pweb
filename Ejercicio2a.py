@@ -1,17 +1,16 @@
-from picture import Picture
 from interpreter import draw
-from pieces import SQUARE, KNIGHT  # Importa las imágenes de las fichas desde pieces.py
+from chessPictures import *
+from picture import Picture
 
-# Define las imágenes de las fichas de ajedrez
-caballo_negro = Picture(KNIGHT)
-caballo_blanco = Picture(KNIGHT)
+# Crear una instancia de Picture para el caballo blanco
+caballo_blanco = knight
 
-# Combina las casillas y los caballos en una fila
-fila1 = caballo_blanco.join(caballo_negro)
+# Crear una fila de caballos blancos
+fila1 = caballo_blanco.join(caballo_blanco)
 
-# Repite la fila dos veces para formar un cuadrado
+# Repetir la fila para formar dos filas de caballos blancos
 cuadrado = fila1.verticalRepeat(2)
 
-# Dibuja las cuatro casillas con los caballos
+# Dibujar el cuadrado con los caballos blancos
 draw(cuadrado)
 
