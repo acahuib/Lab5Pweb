@@ -7,9 +7,11 @@ caballo_negro = Picture(KNIGHT)
 caballo_blanco = Picture(KNIGHT)
 
 # Combina las casillas y los caballos en una fila
-fila1 = caballo_negro.join(caballo_blanco)
-fila2 = fila1.verticalRepeat(2)  # Repite la fila dos veces para formar un cuadrado
+fila1 = caballo_blanco.join(caballo_negro)
+
+# Repite la fila dos veces para formar un cuadrado
+cuadrado = fila1.verticalRepeat(2)
 
 # Dibuja las cuatro casillas con los caballos
-draw(fila2)
+draw(cuadrado)
 
